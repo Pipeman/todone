@@ -1,10 +1,22 @@
 <template>
-  <b-checkbox></b-checkbox>
+  <section>
+    <group-checkbox :tasks="tasks"></group-checkbox>
+  </section>
 </template>
 
 <script>
+import GroupCheckbox from '@/components/GroupCheckbox';
+
 export default {
-  name: 'ToDo'
+  name: 'ToDo',
+  components: {
+    GroupCheckbox,
+  },
+  data () {
+    return {
+      tasks: [],
+    };
+  },
 };
 </script>
 

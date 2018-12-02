@@ -3,16 +3,16 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import { Checkbox } from 'buefy/dist/components/checkbox';
+import { store } from '@/store';
 import 'buefy/dist/buefy.css';
 
 Vue.config.productionTip = false;
-Vue.component('b-checkbox', Checkbox);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 });
